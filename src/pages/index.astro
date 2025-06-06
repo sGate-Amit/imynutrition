@@ -1,152 +1,205 @@
 <!DOCTYPE html>
-<html><head>
-<meta http-equiv="content-type" content="text/html; charset=windows-1252">
-    <title>Imynutrition :: Home</title>
-    <link rel="stylesheet" href="../ppc.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200%7CSource+Sans+Pro:300%7CSource+Sans+Pro:400%7CSource+Sans+Pro:700%7CSource+Sans+Pro:900" media="all">
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=windows-1252">
+  <title>Imynutrition :: Home</title>
+  <link rel="stylesheet" href="../ppc.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200|300|400|700|900" media="all">
 
-<style>
-        /* Modal style */
-.modal-content h2{padding:30px;}
-        #myModal {
-            display: none; /* Hidden by default */
-            position: fixed; /* Stay in place */
-            z-index: 1; /* Sit on top */
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgb(0,0,0); /* Fallback color */
-            background-color: rgba(0,0,0,0.4); /* Black with transparency */
-        }
+  <style>
+    /* Modal style */
+    .modal-content h2 {
+      padding: 20px 20px 0;
+    }
 
-        /* Modal Content */
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-            max-width:540px;
-            text-align: center;
-        }
+    #myModal {
+      display: none;
+      position: fixed;
+      z-index: 999;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      background-color: rgba(0, 0, 0, 0.4);
+    }
 
-        /* Close Button */
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
+    .modal-content {
+      background-color: #fefefe;
+      margin: 10% auto;
+      padding: 20px;
+      border: 1px solid #888;
+      width: 80%;
+      max-width: 400px;
+      text-align: center;
+      border-radius: 8px;
+    }
 
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
-    </style>
-    <script type="text/javascript">
-        window.onload = function() {
-            var modal = document.getElementById("myModal");
-            var closeBtn = document.getElementsByClassName("close")[0];
-            
-            // Show the modal
-            modal.style.display = "block";
-            
-            // When the user clicks on <span> (x), close the modal
-            closeBtn.onclick = function() {
-                modal.style.display = "none";
-            }
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
 
-            // When the user clicks anywhere outside of the modal, close it
-            window.onclick = function(event) {
-                if (event.target == modal) {
-                    modal.style.display = "none";
-                }
-            }
-        }
-    </script>
+    .close:hover,
+    .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    input[type="text"],
+    input[type="password"] {
+      width: 80%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    button {
+      padding: 10px 20px;
+      background-color: #2b82f6;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #1e66cc;
+    }
+
+    #error {
+      color: red;
+      display: none;
+    }
+  </style>
 </head>
 
 <body>
+  <div>
+    <div class="header">
+      <h3>This domain has been registered at Rebel.com</h3>
+    </div>
     <div>
-        <div class="header">
-            <h3>This domain has been registered at Rebel.com</h3>
-        </div>
-        <div>
-            <div class="main-container">
-                <h1 class="content-title">Create Something Meaningful With Rebel.com</h1>
-                <h2 class="content-subtitle">Is this your domain? Get started here:</h2>
+      <div class="main-container">
+        <h1 class="content-title">Create Something Meaningful With Rebel.com</h1>
+        <h2 class="content-subtitle">Is this your domain? Get started here:</h2>
 
-                <div class="section-container">
-                    <div class="size1of3 default-border">
-                        <div class="outer-circle"><span>1</span></div>
-                        <div class="content-section">
-                            <h2 class="section-title">launch your website</h2>
-                            <p class="section-text">Create your free website in minutes with 60+ stunning drag and drop templates.</p>
-                            <a class="btn" href="javascript: goToDM()">choose my template</a>
-                        </div>
-                    </div>
-                    <div class="size1of3 default-border">
-                        <div class="outer-circle"><span>2</span></div>
-                        <div class="content-section">
-                            <h2 class="section-title">Get Custom Email</h2>
-                            <p class="section-text">Your professional email address connects across all your devices, try it free for 1 month.</p>
-                            <a class="btn" href="https://rebel.com/MyAccount/Portfolio.aspx">set up my email</a>
-                        </div>
-                    </div>
-                    <div class="size1of3 default-border">
-                        <div class="outer-circle"><span>3</span></div>
-                        <div class="content-section">
-                            <h2 class="section-title">Privacy &amp; Security</h2>
-                            <p class="section-text">Keep your personal &amp; visitors' information safe with Privacy Protection &amp; SSL certificates.</p>
-                            <a class="btn" href="javascript: goToDM()">manage my domain</a>
-                        </div>
-                    </div>
-                </div>
+        <div class="section-container">
+          <div class="size1of3 default-border">
+            <div class="outer-circle"><span>1</span></div>
+            <div class="content-section">
+              <h2 class="section-title">launch your website</h2>
+              <p class="section-text">Create your free website in minutes with 60+ stunning drag and drop templates.</p>
+              <a class="btn" href="javascript: goToDM()">choose my template</a>
             </div>
-
-
-            <div class="content-container">
-                <div class="inner-container">
-                    <h2 class="content-title">About Rebel</h2>
-                    <p class="content-text">Rebel is a domain name 
-registrar on a mission to help creators, innovators, entrepreneurs and 
-self-starters showcase their contributions in the world's bravest 
-communication space: the Internet.</p>
-                </div>
-                <div class="inner-container divide-inner-container">
-                    <p class="quote">"</p>
-                    <h2 class="main-quote"> Rebel feels like a community more than a registrar, their advice and guidance helped us launch something we're really proud of.
-                        <p class="quote-under"> - garrett moore, standwithcongo.org</p></h2>
-                    <p class="quote">"</p>
-                </div>
+          </div>
+          <div class="size1of3 default-border">
+            <div class="outer-circle"><span>2</span></div>
+            <div class="content-section">
+              <h2 class="section-title">Get Custom Email</h2>
+              <p class="section-text">Your professional email address connects across all your devices, try it free for 1 month.</p>
+              <a class="btn" href="https://rebel.com/MyAccount/Portfolio.aspx">set up my email</a>
             </div>
+          </div>
+          <div class="size1of3 default-border">
+            <div class="outer-circle"><span>3</span></div>
+            <div class="content-section">
+              <h2 class="section-title">Privacy &amp; Security</h2>
+              <p class="section-text">Keep your personal &amp; visitors' information safe with Privacy Protection &amp; SSL certificates.</p>
+              <a class="btn" href="javascript: goToDM()">manage my domain</a>
+            </div>
+          </div>
+        </div>
+      </div>
 
+      <div class="content-container">
+        <div class="inner-container">
+          <h2 class="content-title">About Rebel</h2>
+          <p class="content-text">
+            Rebel is a domain name registrar on a mission to help creators, innovators, entrepreneurs and self-starters
+            showcase their contributions in the world's bravest communication space: the Internet.
+          </p>
         </div>
-        <div class="header">
-            <img class="reseller-logo" src="../logo.png">
+        <div class="inner-container divide-inner-container">
+          <p class="quote">"</p>
+          <h2 class="main-quote">
+            Rebel feels like a community more than a registrar, their advice and guidance helped us launch something we're really proud of.
+            <p class="quote-under"> - Garrett Moore, standwithcongo.org</p>
+          </h2>
+          <p class="quote">"</p>
         </div>
+      </div>
     </div>
 
-    <!-- The Modal -->
-    <div id="myModal" class="modal">
-        <div class="modal-content">
-            <span class="close">&times;</span>
-            <h2>Welcome  to imynutrition.com, our mail group for constant updates.</h2>
-        </div>
+    <div class="header">
+      <img class="reseller-logo" src="../logo.png">
     </div>
-    <script>
+  </div>
+
+  <!-- Login Modal -->
+  <div id="myModal" class="modal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2>Login to imynutrition.com</h2>
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Username" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <br>
+        <button type="submit">Login</button>
+        <p id="error">Invalid username or password.</p>
+      </form>
+    </div>
+  </div>
+
+  <script>
     function goToEmail() {
-        console.log(window.location);
-        window.location.href = "//rebel.com/MyAccount/Portfolio.aspx#/account/init/"+window.location.hostname;
+      window.location.href = "//rebel.com/MyAccount/Portfolio.aspx#/account/init/" + window.location.hostname;
     }
-        
+
     function goToDM() {
-         window.location.href = "//rebel.com/MyAccount/Portfolio.aspx?domain="+window.location.hostname+"#"+ window.location.hostname;
-        
+      window.location.href = "//rebel.com/MyAccount/Portfolio.aspx?domain=" + window.location.hostname + "#" + window.location.hostname;
     }
-    </script>
-</body></html>
+
+    window.onload = function () {
+      const modal = document.getElementById("myModal");
+      const closeBtn = document.getElementsByClassName("close")[0];
+      const loginForm = document.getElementById("loginForm");
+      const errorText = document.getElementById("error");
+
+      modal.style.display = "block";
+
+      closeBtn.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+
+      loginForm.onsubmit = function (e) {
+        e.preventDefault();
+        const username = document.getElementById("username").value.trim();
+        const password = document.getElementById("password").value.trim();
+
+        if (username === "admin" && password === "1234") {
+          modal.style.display = "none";
+        } else {
+          errorText.style.display = "block";
+        }
+      };
+
+      window.onkeydown = function (event) {
+        if (event.key === "Escape") {
+          modal.style.display = "none";
+        }
+      };
+    };
+  </script>
+</body>
+</html>
